@@ -1,0 +1,26 @@
+*{box-sizing:border-box}
+:root{color-scheme:dark;--bg:#080808;--text:#f4eee7;--muted:#a49b91;--gold:#c9a878;--line:rgba(201,168,120,.23)}
+body{margin:0;min-height:100vh;color:var(--text);font-family:'DM Sans',sans-serif;background:radial-gradient(ellipse at 50% 0%,rgba(129,91,54,.2),transparent 42%),radial-gradient(ellipse at 85% 90%,rgba(70,55,43,.13),transparent 38%),var(--bg)}
+.hidden{display:none!important}button{font:inherit;cursor:pointer}
+.login-screen{min-height:100vh;display:grid;place-items:center;padding:24px}
+.login-card{width:min(100%,460px);padding:58px 38px 46px;text-align:center;background:rgba(24,23,22,.9);border:1px solid var(--line);border-radius:4px;box-shadow:0 28px 100px #0009;animation:appear .8s ease both}
+.mark{color:var(--gold);font-size:30px;margin-bottom:28px}.eyebrow{color:var(--gold);font-size:10px;letter-spacing:.34em;margin:0 0 15px}
+h1{margin:0;font:500 clamp(32px,7vw,48px)/1.15 'Playfair Display',serif;letter-spacing:-.035em}
+.subtitle{color:var(--muted);font-size:14px;line-height:1.8;margin:18px auto 30px;max-width:280px}
+.google-button{display:flex;justify-content:center;min-height:44px}.message,.gallery-message{color:var(--muted);font-size:12px;line-height:1.7;margin:22px 0 0;text-align:center}
+.gallery{max-width:1440px;margin:auto;padding:34px clamp(18px,5vw,64px) 70px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-bottom:25px;border-bottom:1px solid var(--line)}
+.topbar h1{font-size:clamp(26px,4vw,38px)}.account{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.role-pill{color:#17120d;background:var(--gold);padding:6px 9px;font-size:9px;letter-spacing:.14em;border-radius:2px}
+.user-email{color:var(--muted);font-size:11px}.logout{border:1px solid var(--line);background:transparent;color:var(--text);padding:9px 13px;font-size:11px}
+.gallery-heading{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:48px 0 20px}
+.gallery-heading h2{margin:0;font:500 clamp(28px,5vw,42px)/1.15 'Playfair Display',serif}.count{color:var(--muted);font-size:12px}
+.gallery-message{text-align:left;margin:18px 0}.photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:14px}
+.photo-card{margin:0;background:#141210;border:1px solid #ffffff12;overflow:hidden;cursor:zoom-in}
+.photo-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .5s,opacity .5s}
+.photo-card:hover img{transform:scale(1.035);opacity:.88}.photo-card figcaption{padding:11px 13px;color:#b8ada0;font-size:11px;overflow-wrap:anywhere}
+.lightbox{position:fixed;inset:0;z-index:10;background:#000f;display:grid;place-items:center;padding:55px 18px 30px}
+.lightbox img{max-width:min(94vw,1500px);max-height:82vh;object-fit:contain}.lightbox p{color:#c8bba9;font-size:12px;text-align:center}
+.close{position:absolute;top:14px;right:20px;color:white;background:transparent;border:0;font-size:38px}
+@keyframes appear{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:640px){.login-card{padding:48px 24px 38px}.topbar{align-items:flex-start;flex-direction:column}.account{justify-content:flex-start}.gallery-heading{align-items:flex-start;flex-direction:column;margin-top:34px}}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <title>One Little Secret | Private Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <main>
+    <section id="loginView" class="login-screen">
+      <div class="login-card">
+        <div class="mark">✦</div>
+        <p class="eyebrow">A PRIVATE COLLECTION</p>
+        <h1>One Little Secret</h1>
+        <p class="subtitle">Some moments are meant to be kept forever.</p>
+        <div id="googleButton" class="google-button"></div>
+        <p id="loginMessage" class="message" aria-live="polite">Exclusive access for invited guests.</p>
+      </div>
+    </section>
+
+    <section id="galleryView" class="gallery hidden">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">A PRIVATE COLLECTION</p>
+          <h1>One Little Secret</h1>
+        </div>
+        <div class="account">
+          <span id="rolePill" class="role-pill">VIEWER</span>
+          <span id="userEmail" class="user-email"></span>
+          <button id="logoutButton" class="logout" type="button">Sign out</button>
+        </div>
+      </header>
+      <div class="gallery-heading">
+        <div><p class="eyebrow">THE MOMENTS</p><h2>Collected memories</h2></div>
+        <span id="photoCount" class="count"></span>
+      </div>
+      <p id="galleryMessage" class="gallery-message">Loading your collection…</p>
+      <div id="photoGrid" class="photo-grid"></div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button id="closeLightbox" class="close" type="button" aria-label="Close">×</button>
+    <img id="lightboxImage" alt="Selected gallery photo">
+    <p id="lightboxCaption"></p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
