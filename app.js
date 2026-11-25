@@ -1,5 +1,5 @@
 // Paste your Google OAuth Client ID below. Never put a Client Secret here.
-const GOOGLE_CLIENT_ID = 281417858143-vc2tcg31eopda5umdb24bjpjqn2pgm38.apps.googleusercontent.com;
+const GOOGLE_CLIENT_ID = "281417858143-vc2tcg31eopda5umdb24bjpjqn2pgm38.apps.googleusercontent.com";
 const API_BASE = "https://cinematic-gallery-api.piyushgajbhiye4.workers.dev";
 
 const $ = (id) => document.getElementById(id);
