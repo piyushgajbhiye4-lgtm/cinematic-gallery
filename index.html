@@ -36,12 +36,20 @@
           <button id="logoutButton" class="logout" type="button">Sign out</button>
         </div>
       </header>
+
       <div class="gallery-heading">
         <div><p class="eyebrow">THE MOMENTS</p><h2>Collected memories</h2></div>
-        <span id="photoCount" class="count"></span>
+        <span id="mediaCount" class="count"></span>
       </div>
-      <p id="galleryMessage" class="gallery-message">Loading your collection…</p>
-      <div id="photoGrid" class="photo-grid"></div>
+
+      <nav class="media-tabs" aria-label="Gallery sections">
+        <button class="media-tab active" type="button" data-tab="photos">Photos <span id="photoTabCount">0</span></button>
+        <button class="media-tab" type="button" data-tab="videos">Videos <span id="videoTabCount">0</span></button>
+      </nav>
+
+      <p id="galleryMessage" class="gallery-message" aria-live="polite">Loading your collection…</p>
+      <div id="photoGrid" class="photo-grid media-grid"></div>
+      <div id="videoGrid" class="photo-grid media-grid hidden"></div>
     </section>
   </main>
 
@@ -49,6 +57,14 @@
     <button id="closeLightbox" class="close" type="button" aria-label="Close">×</button>
     <img id="lightboxImage" alt="Selected gallery photo">
     <p id="lightboxCaption"></p>
+  </div>
+
+  <div id="videoLightbox" class="video-lightbox hidden" role="dialog" aria-modal="true" aria-label="Video player">
+    <button id="closeVideo" class="close" type="button" aria-label="Close video">×</button>
+    <div class="video-player-wrap">
+      <video id="galleryVideo" controls playsinline preload="metadata"></video>
+      <p id="videoCaption"></p>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>

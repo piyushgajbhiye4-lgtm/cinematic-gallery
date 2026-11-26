@@ -19,8 +19,20 @@ h1{margin:0;font:500 clamp(32px,7vw,48px)/1.15 'Playfair Display',serif;letter-s
 .photo-card{margin:0;background:#141210;border:1px solid #ffffff12;overflow:hidden;cursor:zoom-in}
 .photo-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .5s,opacity .5s}
 .photo-card:hover img{transform:scale(1.035);opacity:.88}.photo-card figcaption{padding:11px 13px;color:#b8ada0;font-size:11px;overflow-wrap:anywhere}
-.lightbox{position:fixed;inset:0;z-index:10;background:#000f;display:grid;place-items:center;padding:55px 18px 30px}
-.lightbox img{max-width:min(94vw,1500px);max-height:82vh;object-fit:contain}.lightbox p{color:#c8bba9;font-size:12px;text-align:center}
-.close{position:absolute;top:14px;right:20px;color:white;background:transparent;border:0;font-size:38px}
+.media-tabs{display:flex;gap:9px;margin:28px 0 18px;border-bottom:1px solid var(--line)}
+.media-tab{padding:12px 17px 14px;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);font-size:12px}
+.media-tab span{display:inline-grid;place-items:center;min-width:20px;height:20px;margin-left:7px;padding:0 5px;border-radius:20px;background:#ffffff12;color:#d7c5aa;font-size:10px}
+.media-tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.video-card{position:relative;margin:0;min-height:220px;overflow:hidden;border:1px solid #ffffff16;background:linear-gradient(145deg,#29231d,#111);cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end}
+.video-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 42%,#c9a87822,transparent 35%),linear-gradient(0deg,#000d,transparent 70%)}
+.video-art{position:absolute;inset:0;display:grid;place-items:center;color:#d5b98e;font-size:54px;opacity:.75}
+.play-button{position:absolute;left:50%;top:43%;transform:translate(-50%,-50%);width:58px;height:58px;border:1px solid #d8bd91;border-radius:50%;display:grid;place-items:center;padding-left:4px;color:#f4e6ce;background:#17120d99;font-size:22px;z-index:1}
+.video-card figcaption{position:relative;z-index:1;padding:16px 15px;color:#e8ded0;font-size:12px;overflow-wrap:anywhere;background:linear-gradient(transparent,#0009)}
+.video-card:hover .play-button{background:#c9a878;color:#15110c}
+.lightbox,.video-lightbox{position:fixed;inset:0;z-index:10;background:#000f;display:grid;place-items:center;padding:55px 18px 30px}
+.lightbox img{max-width:min(94vw,1500px);max-height:82vh;object-fit:contain}.lightbox p,.video-player-wrap p{color:#c8bba9;font-size:12px;text-align:center}
+.close{position:absolute;top:14px;right:20px;color:white;background:transparent;border:0;font-size:38px;z-index:3}
+.video-player-wrap{width:min(1100px,96vw);display:flex;flex-direction:column;align-items:center}
+.video-player-wrap video{width:100%;max-height:78vh;background:#000;object-fit:contain}
 @keyframes appear{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:640px){.login-card{padding:48px 24px 38px}.topbar{align-items:flex-start;flex-direction:column}.account{justify-content:flex-start}.gallery-heading{align-items:flex-start;flex-direction:column;margin-top:34px}}
+@media(max-width:640px){.login-card{padding:48px 24px 38px}.topbar{align-items:flex-start;flex-direction:column}.account{justify-content:flex-start}.gallery-heading{align-items:flex-start;flex-direction:column;margin-top:34px}.video-card{min-height:190px}}
